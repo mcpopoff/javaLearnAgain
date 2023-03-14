@@ -1,7 +1,10 @@
-package org.example;
+package org.example.javaLearnAgain;
 
+
+import org.example.javaLearnAgain.simpleClasses.Counter;
 
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("-----LESSON_008-----");
         Counter e = new Counter("evenCounter");
@@ -16,5 +19,9 @@ public class Main {
 
         System.out.println(e);
         System.out.println(o);
+
+
+        System.out.println("-----LESSON_012-----");
+        org.example.javaLearnAgain.counterAggregation.Main.main();
     }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.javaLearnAgain.simpleClasses;
 
 public class Counter {
     private final String NAME;
@@ -8,7 +8,7 @@ public class Counter {
         NAME = name;
         this.value = value;
     }
-    Counter(String name){
+    public Counter(String name){
         this(name, 0);
     }
 
