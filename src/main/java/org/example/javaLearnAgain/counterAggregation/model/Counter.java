@@ -6,7 +6,7 @@ public class Counter {
     private int value;
 
 
-    Counter(String name, String unit, int value){
+    public Counter(String name, String unit, int value){
         NAME = name;
         UNIT = unit;
         this.value = value;
@@ -34,8 +34,13 @@ public class Counter {
     public String getName() {
         return NAME;
     }
+
+    public String getUNIT() {
+        return UNIT;
+    }
+
     @Override
     public String toString(){
-        return getName() + ": " + getValue() + this.UNIT;
+        return getName() + ": " + getValue() + getUNIT();
     }
 }

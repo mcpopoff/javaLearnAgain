@@ -1,15 +1,18 @@
 package org.example.javaLearnAgain.counterAggregation;
 
 import org.example.javaLearnAgain.counterAggregation.consts.CountersConsts;
-import org.example.javaLearnAgain.counterAggregation.model.Counter;
+import org.example.javaLearnAgain.counterAggregation.model.*;
 import org.example.javaLearnAgain.counterAggregation.services.CounterService;
 
 public class Main {
     public static void main(){
-        Counter gasCounter = new Counter(CountersConsts.GAS_COUNTER_NAME,CountersConsts.M3_UNIT);
-        Counter hotWaterCounter = new Counter(CountersConsts.HOT_WATER_COUNTER_NAME,CountersConsts.M3_UNIT);
-        Counter coldWaterCounter = new Counter(CountersConsts.COLD_WATER_COUNTER_NAME,CountersConsts.M3_UNIT);
-        Counter electricCounter = new Counter(CountersConsts.ELECTRIC_COUNTER_NAME,CountersConsts.KWH_UNIT);
+        Counter gasCounter = new GasCounter();
+        Counter hotWaterCounter = new HotWaterCounter();
+        Counter coldWaterCounter = new ColdWaterCounter();
+        Counter electricCounter = new ElectricCounter();
+
+        ColdWaterCounter c = (ColdWaterCounter) coldWaterCounter;
+        c.print();
 
         CounterService cs = new CounterService(gasCounter,hotWaterCounter,coldWaterCounter,electricCounter);
         cs.increase(CountersConsts.GAS_COUNTER_NAME, 100);
