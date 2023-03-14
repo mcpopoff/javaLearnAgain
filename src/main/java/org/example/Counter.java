@@ -24,14 +24,6 @@ public class Counter {
         return increase(1);
     }
 
-    public int decrease(int i){
-        value -= i;
-        return getValue();
-    }
-    public int decrease(){
-        return decrease(1);
-    }
-
     public String getName() {
         return NAME;
     }
