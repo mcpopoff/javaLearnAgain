@@ -8,8 +8,8 @@ public class Cat extends Animal{
     public Cat(String color){
         System.out.println("I’m a " + color + " cat");
     }
-
-    public void meow(){
-        super.sound("meow");
+    @Override
+    public void sound(){
+        System.out.println("meow");
     }
 }

@@ -10,20 +10,13 @@ public class Main {
         Animal cat1 = new Cat("white");
         Animal dog1 = new Dog("black");
         Animal cow1 = new Cow("red");
-        Animal unkn = new Animal();
+        //Animal unkn = new Animal() ;
 
-        Animal [] animals = {cat1,dog1,cow1, unkn};
+        Animal [] animals = {cat1,dog1,cow1};
 
         for (Animal a:animals) {
-            if (Cat.class.equals(a.getClass())) {
-                ((Cat) a).meow();
-            } else if (Dog.class.equals(a.getClass())) {
-                ((Dog) a).woof();
-            } else if (Cow.class.equals(a.getClass())) {
-                ((Cow) a).moo();
-            } else {
-                System.out.println("...");
-            }
+            a.sound();
+
         }
 
 
